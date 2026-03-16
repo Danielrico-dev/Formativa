@@ -1,2 +1,2 @@
 # Formativa
-Trabalho a ser realizado na disciplina de DevOps
+Trabalho a ser realizado na disciplina de *DevOps*
