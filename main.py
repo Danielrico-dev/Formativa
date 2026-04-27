@@ -1,26 +1,24 @@
-print("Calculadora em Python")
-
-num1 = float(input("Digite o primeiro número: "))
-num2 = float(input("Digite o segundo número: "))
-
-operacao = input("Escolha a operação (+ - * /): ")
-
-if operacao == "+":
-    resultado = num1 + num2
-
-elif operacao == "-":
-    resultado = num1 - num2
-
-elif operacao == "*":
-    resultado = num1 * num2
-
-elif operacao == "/":
-    if num2 == 0:
-        resultado = "Erro: divisão por zero"
+def calcular(num1, num2, operacao):
+    if operacao == "+":
+        return num1 + num2
+    elif operacao == "-":
+        return num1 - num2
+    elif operacao == "*":
+        return num1 * num2
+    elif operacao == "/":
+        if num2 == 0:
+            return "Erro: divisão por zero"
+        return num1 / num2
     else:
-        resultado = num1 / num2
+        return "Operação inválida"
 
-else:
-    resultado = "Operação inválida"
 
-print("Resultado:", resultado)
+if __name__ == "__main__":
+    print("Calculadora em Python")
+
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+    operacao = input("Escolha a operação (+ - * /): ")
+
+    resultado = calcular(num1, num2, operacao)
+    print("Resultado:", resultado)
